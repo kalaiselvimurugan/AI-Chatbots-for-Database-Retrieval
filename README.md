@@ -89,9 +89,14 @@ The above layout is used across all tabs: Employees, Departments, and Projects f
 ## 📸 Screenshots
 
 - ✅ Chatbot answering questions
+ 
 - ✅ Employee CRUD in action
+   ![App Screenshot](employee_CRUD.png)
 - ✅ Department and Project Forms
+   ![App Screenshot](department_CRUD.png)
+   ![App Screenshot](project_CRUD.png)
 - ✅ Dynamic chart selection
+
 
 ---
 
