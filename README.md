@@ -1,33 +1,33 @@
 
-# 🤖 SmartQueryBot – AI SQL Chatbot with CRUD & Analytics
+# SmartQueryBot – AI SQL Chatbot with CRUD & Analytics
 
 SmartQueryBot is a Streamlit-based application that empowers users to manage and query an employee database using natural language. Powered by LangChain and LLaMA 3.1 (via Ollama), the app supports full CRUD functionality across Employees, Departments, and Projects, alongside dynamic chart visualizations.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🧠 **AI Chatbot** – Ask natural language questions; get accurate SQL-powered answers.
-- 🧑‍💼 **Employee Management** – Add, update, and delete employee data easily.
-- 🏢 **Department CRUD** – Manage department records with form-based inputs.
-- 📁 **Project Handling** – Assign and update projects under specific departments.
-- 📊 **Chart Reports** – Visualize data using interactive and selectable charts.
-- 🔄 **Clear Buttons** – Reset input forms on every tab with a click.
-- ⚙️ **Modular Tabs** – Organized UI with dedicated sections for each module.
+- **AI Chatbot** – Ask natural language questions; get accurate SQL-powered answers.
+- **Employee Management** – Add, update, and delete employee data easily.
+- **Department CRUD** – Manage department records with form-based inputs.
+- **Project Handling** – Assign and update projects under specific departments.
+- **Chart Reports** – Visualize data using interactive and selectable charts.
+- **Clear Buttons** – Reset input forms on every tab with a click.
+- **Modular Tabs** – Organized UI with dedicated sections for each module.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Streamlit
 - **LLM Engine**: LLaMA 3.1 via Ollama
 - **Framework**: LangChain
-- **Database**: SQLite
+- **Database**: SQLite3
 - **Language**: Python 3.10+
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository
@@ -51,7 +51,24 @@ streamlit run app.py
 
 ---
 
-## 🧠 Sample Prompts
+## Database workaround
+
+- Create database "sample.db" 
+- Create your table and schema in "sample_schema.sql" file
+- Connect sqlite3 with sample_schema.sql
+
+     ```
+     sqlite3 sample.db < sample_schema.sql
+     ```
+- Check the connection between database and tables
+    ```
+    > sqlite3 sample.db
+    > .tables
+    > table1 table2 table3  .....
+    > select * from table1;
+    ```
+---
+## Sample Prompts
 
 ```markdown
 FOR CHATBOT:
@@ -72,7 +89,7 @@ Avoid using columns with lots of nulls or unrelated types (e.g., employee_id vs 
 
 ---
 
-## ✍️ CRUD Form Sample
+## CRUD Form Sample
 
 ```python
 col1, col2 = st.columns(2)
@@ -86,7 +103,7 @@ The above layout is used across all tabs: Employees, Departments, and Projects f
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - ✅ Chatbot answering questions
    ![App Screenshot](chatbot.png)
@@ -105,15 +122,15 @@ The above layout is used across all tabs: Employees, Departments, and Projects f
 
 ---
 
-## 🔧 Requirements
+## Requirements
 
 ```
-sqlite3
-streamlit
-langchain
-Ollama
-pandas
-matplotlib
-ChatPromptTemplate
+- sqlite3
+- streamlit
+- langchain
+- Ollama
+- pandas
+- matplotlib
+- ChatPromptTemplate
 ```
 ---
